@@ -1,8 +1,9 @@
 const Model = require('./model')
 
-const addRestaurant = restaurant => {
+const addRestaurant = async restaurant => {
     const newRestaurant = new Model(restaurant)
-    newRestaurant.save()
+    const result = await newRestaurant.save()
+    return result
 }
 
 module.exports = {
