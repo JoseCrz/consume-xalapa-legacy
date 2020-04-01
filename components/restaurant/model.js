@@ -30,13 +30,13 @@ const restaurantSchema = new Schema({
         mon: {
             type: Boolean,
         },
-        tues: {
+        tue: {
             type: Boolean,
         },
         wed: {
             type: Boolean,
         },
-        thur: {
+        thu: {
             type: Boolean,
         },
         fri: {
@@ -72,7 +72,7 @@ const restaurantSchema = new Schema({
     website: String,
     phone: String,
     address: String,
-    createdAt: {
+    updatedAt: {
         type: Date,
         default: Date.now
     }
