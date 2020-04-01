@@ -1,0 +1,23 @@
+.u-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 36px;
+    margin: 0 auto;
+
+    &--mini {
+        max-width: 1000px;
+    }
+    
+    // &--mini {
+    //     max-width: 73%;
+    // }
+
+    // &--projects {
+    //     // border: 2px solid goldenrod;
+    //     height: 100%;
+    // }
+
+    @include iphone-8 {
+       padding: 0 10px;
+    }
+}

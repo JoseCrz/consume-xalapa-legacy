@@ -1,0 +1,11 @@
+.c-directory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px 0;
+    
+    @include iphone-8 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    } 
+}

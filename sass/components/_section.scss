@@ -1,0 +1,19 @@
+.c-section {
+
+    &__title {
+        font-size: 2.5em;
+        text-align: center;
+        &--logo-below {
+            margin-bottom: 0;
+        }
+    }
+
+    &__description {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    @include iphone-8 {
+        font-size: 12px;
+    }
+}

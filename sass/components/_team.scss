@@ -1,0 +1,15 @@
+.c-team {
+    margin-top: 25px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+
+    @include iphone-8 {
+
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+}

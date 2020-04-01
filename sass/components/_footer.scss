@@ -1,0 +1,31 @@
+.c-footer {
+    text-align: center;
+    padding-bottom: 50px;
+
+    &__link {
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &--memo {
+            &:hover {
+                color: #ffeb3b;
+            }
+        }
+        &--rene {
+            &:hover {
+                color: #cddc39;
+            }
+        }
+        &--jose {
+            &:hover {
+                color: #8bc34a;
+            }
+        }
+        &--dtt {
+            &:hover {
+                color: #03a9f4;
+            }
+        }
+    }
+}

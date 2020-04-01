@@ -1,0 +1,86 @@
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding:0;
+    }
+
+    &__list-item {
+        margin-left: 20px;
+        font-weight: bold;
+
+        &--button {
+            background: var(--primary);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    @include ipad {
+        justify-content: center;
+
+        &__logo {
+            font-size: 2.5em;
+        }
+        
+    }
+
+    @include iphone-8 {
+        font-size: 12px;
+        &__nav {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: -50vw;
+            width: 50vw;
+            background: var(--primary);
+            z-index: 9998;
+            transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0,0,0,.08);
+            border-radius: 5px 0 0 5px;
+            &--active {
+                right: 0;
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        &__list-item {
+            margin: 10px 0;
+            font-size: 1.6em;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

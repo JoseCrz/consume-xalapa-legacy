@@ -1,0 +1,97 @@
+.c-form {
+    padding: 25px 50px;
+    background: var(--element);
+    border-radius: 5px;
+    max-width: 70%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    &__title {
+        font-size: 3.5em;
+    }
+
+    &__description {
+        font-size: 1.5em;
+        line-height: 1.5;
+    }
+
+    &__label {
+        font-size: 1.2em;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 5px;
+
+        &--small {
+            margin: 5px 0;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        font-family: $font;
+        font-size: 1.2em;
+        border: none;
+        background: var(--body);
+        padding: 5px;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    &__input-divider {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__input-division {
+        width: 49%;
+    }
+
+    &__radio {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    
+    &__button {
+        box-sizing: initial;
+        margin-top: 20px;
+        font-family: $font;
+        color: var(--text-cta);
+        background: var(--primary);
+        border: none;
+        letter-spacing: 3px;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        font-size: 2em;
+        transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
+        outline: none;
+        border-radius: 5px;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        &:active {
+            transform: translateY(5px);
+            // background: lighten(var(--text)-color-dark, 30%);
+        }
+    }
+
+    @include ipad {
+        &__button {
+            font-size: 1.5em;
+        }
+    }
+
+    @include iphone-8 {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 100%;
+
+        &__button-container {
+            // border: 1px solid teal;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

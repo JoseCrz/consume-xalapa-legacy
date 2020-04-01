@@ -1,0 +1,132 @@
+.c-biz {
+    background: var(--element);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    &__bottom {
+        padding: 15px 20px;
+    }
+    &__image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__category {
+        text-transform: uppercase;
+        margin: 0 5px 0 0;
+        font-weight: bold;
+        display: inline;
+    }
+
+    &__name {
+        font-size: 1.8em;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+    &__type {
+        margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__hours {
+        margin: 0;
+        color: var(--primary);
+        font-weight: bold;
+        letter-spacing: 1px;
+        display: inline;
+        text-transform: uppercase;
+    }
+
+    &__details, &__orders, &__actions {
+        border-bottom: 1px solid var(--text);
+        padding: 10px 0;
+    }
+
+    &__orders-list {
+        padding: 0;
+        margin: 5px 0;
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        font-size: .7em;
+    }
+    
+    &__order {
+        margin: 0 3px;
+        font-weight: bold;
+        span {
+            background: var(--primary);
+            color: var(--body);
+            padding: 3px;
+            border-radius: 5px;
+            display: block;
+        }
+
+    }
+
+    &__menu-title {
+        margin: 10px 0;
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+
+    &__menu-list {
+        margin: 0;
+    }
+
+    &__actions {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        // gap: 20px;
+    }
+
+    &__cta {
+        text-transform: uppercase;
+        background: var(--primary);
+        color: var(--text-cta);
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--hollow {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary)
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        &:hover {
+            color: var(--primary);
+        }
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    @include iphone-8 {
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+}

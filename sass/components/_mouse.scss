@@ -1,0 +1,43 @@
+.c-mouse {
+    display: none;
+    width: 28px;
+    height: 48px;
+    border-radius: 11px 11px 15px 15px;
+    border: 1px solid var(--text);
+    left: 50%;
+    margin-left: -13px;
+    z-index: 9990;
+
+    span {
+        display: block;
+        margin: 6px auto;
+        width: 2px;
+        height: 5px;
+        border-radius: 4px;
+        background: var(--text);
+        border: 1px solid transparent;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-name: scroll;
+    }
+
+    @include iphone-8 {
+        display: block;
+    }
+}
+
+@keyframes scroll {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      }
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+      transform: translateY(20px);
+      }
+  }

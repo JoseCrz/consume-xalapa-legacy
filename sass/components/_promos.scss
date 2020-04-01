@@ -1,0 +1,84 @@
+.c-promo {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &__image {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__paper{
+        width: 60%;
+        background: var(--text);
+        display: flex;
+        align-items: center;
+    }
+
+    &__text-container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: var(--primary);
+        font-size: 4em;
+        margin: 0;
+    }
+
+    &__author {
+        color: var(--accent);
+        font-size: 3em;
+        margin: 0;
+    }
+
+    &__cta-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__cta {
+        background: var(--body);
+        font-size: 2em;
+        font-weight: bold;
+        padding: 12px 24px;
+        border-radius: 5px;
+    }
+
+    @include iphone-8 {
+        flex-direction: column;
+        font-size: 12px;
+        
+        &__image  {
+            width: 100%;
+        }
+
+        &__paper {
+            width: 100%;
+            padding: 15px;
+        }
+
+        &__text-container {
+            max-width: 100%;
+        }
+
+        &__title {
+            font-size: 3em;
+        }
+
+        &__author {
+            font-size: 2em;
+        }
+
+        &__cta-container {
+            justify-content: center;
+        }
+
+        &__cta {
+            margin-top: 20px;
+        }
+    }
+}

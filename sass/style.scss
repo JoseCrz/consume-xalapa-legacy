@@ -1,0 +1,90 @@
+:root {
+    // DARK MODE COLORS
+    // --body: #2F323A;
+    // --element:#434853;
+    // --primary: #43AA8B;
+    // --accent: #C05746;
+    // --text:#F2F7F2;
+
+    --body: #E5E5E5;
+    --element:#F2F7F2;
+    --primary: #C05746;
+    --accent: #43AA8B;
+    --text:#2F323A;
+    --text-cta: #F2F7F2;
+    --logo-font: 'Montserrat', sans-serif;
+    
+}
+
+// * SECTION Colors
+$font: 'Roboto Condensed', sans-serif;
+$title: 'Montserrat', sans-serif;
+
+* {
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body {
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) .6s;
+    background: var(--body);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+// * SECTION MEDIA QUERIES
+@mixin ipad {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin iphone-8 {
+    @media screen and (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin iphone-x {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin iphone-5 {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+// * SECTION Utils
+@import './utils/reset';
+@import './utils/wrapper';
+@import './utils/icons';
+
+// * SECTION Components
+@import './components/header';
+@import './components/logo';
+@import './components/burger-menu';
+@import './components/hero';
+@import './components/mouse';
+@import './components/section';
+@import './components/directory';
+@import './components/biz';
+@import './components/map';
+@import './components/promos';
+@import './components/team';
+@import './components/member';
+@import './components/form';
+@import './components/mobile-menu';
+@import './components/footer';
