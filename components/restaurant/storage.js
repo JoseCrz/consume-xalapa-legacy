@@ -6,6 +6,12 @@ const addRestaurant = async restaurant => {
     return result
 }
 
+const getRestaurants = async filter => {
+    const restaurants = await Model.find(filter)
+    return restaurants
+}
+
 module.exports = {
-    addRestaurant
+    addRestaurant,
+    getRestaurants
 }

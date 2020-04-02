@@ -24,7 +24,13 @@ const addRestaurant = ({name = null, category = null, schedule = null, workDays 
         resolve(createdRestaurant)
     })
 }
-
+const getRestaurants = filter => {
+    return new Promise ( async (resolve, reject) => {
+        const restaurants = await storage.getRestaurants(filter)
+        resolve(restaurants)
+    })
+}
 module.exports = {
     addRestaurant,
+    getRestaurants,
 }

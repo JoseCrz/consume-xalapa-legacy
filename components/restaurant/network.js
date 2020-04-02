@@ -4,6 +4,18 @@ const controller = require('./controller')
 
 const router = express.Router()
 
+router.get('/', (req, res) => {
+    controller.getRestaurants({})
+    .then(restaurants => {
+        console.log(restaurants)
+        response.success(req, res, restaurants, 200)
+    })
+    .catch(error => {
+        console.log(error)
+        response.error(req, res, 'Couldnt get Restaurants')
+    })
+})
+
 router.post('/', (req, res) => {
     const restaurant = req.body
     // console.log(restaurant)
