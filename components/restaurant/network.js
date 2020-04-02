@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     controller.getRestaurants({})
     .then(restaurants => {
         console.log(restaurants)
-        response.success(req, res, restaurants, 200)
+        res.render('restaurants.ejs', { restaurants:restaurants })
     })
     .catch(error => {
         console.log(error)
