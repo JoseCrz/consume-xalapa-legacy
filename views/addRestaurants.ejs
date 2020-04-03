@@ -3,10 +3,72 @@
 <%- include('./includes/head.ejs') %>
 <body>
     <h2>Add Restaurant</h2>
-    <!-- <form id="form" action="">
-
-    </form> -->
-    <button id="button">Try me!</button> 
+    <form id="form" action="">
+        <label for="name">Nombre del Negocio</label>
+        <input name="name" type="text">
+        <label for="category">Categoria del Restaurante</label>
+        <input name="category" type="text">
+        <p>Horario</p>
+        <label for="opens">Abre</label>
+        <input name="opens" type="text">
+        <label for="closes">Cierra</label>
+        <input name="closes" type="text">
+        <p>Días de trabajo</p>
+        <label for="mon">
+            Lunes
+            <input type="checkbox" name="mon" id="">
+        </label>
+        <label for="tue">
+            Martes
+            <input type="checkbox" name="tue" id="">
+        </label>
+        <label for="wed">
+            Miercoles
+            <input type="checkbox" name="wed" id="">
+        </label>
+        <label for="thu">
+            Jueves
+            <input type="checkbox" name="thu" id="">
+        </label>
+        <label for="fri">
+            Viernes
+            <input type="checkbox" name="fri" id="">
+        </label>
+        <label for="sat">
+            Sabado
+            <input type="checkbox" name="sat" id="">
+        </label>
+        <label for="sun">
+            Domingo
+            <input type="checkbox" name="sun" id="">
+        </label>
+        <label for="tags">Etiquetas</label>
+        <input type="text" name="tags" id="">
+        <label for="menu">Menu reducido</label>
+        <input type="text" name="menu" id="">
+        <label for="phone">Telefono</label>
+        <input type="number" name="phone" id="">
+        <label for="whatsapp">WhatsApp</label>
+        <input type="number" name="whatsapp" id="">
+        <label for="facebook">facebook</label>
+        <input type="text" name="facebook" id="">
+        <label for="instagram">instagram</label>
+        <input type="text" name="instagram" id="">
+        <label for="channel">Recibir pedidos</label>
+        <select id="" name="channel">
+            <option value="whatsapp">WhatsApp</option>
+            <option value="phone">Telefono</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+        </select>
+        <label for="website">website</label>
+        <input type="text" name="website" id="">
+        <label for="address">dirección</label>
+        <input type="text" name="address" id="">
+        <label for="image">Imagen</label>
+        <input type="file" name="image" id="">
+        <button id="button">Enviar</button> 
+    </form>
     <%- include('./includes/footer.ejs') %>
     <script>
         const button = document.querySelector('#button')
