@@ -37,18 +37,19 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/', upload.single('image') ,(req, res) => {
-    console.log(req.file)
-    console.log(req.body)
-    // const restaurant = req.body
-    // console.log(restaurant)
-    // controller.addRestaurant(restaurant)
-    //     .then(addedRestaurant => {
-    //         response.success(req, res, addedRestaurant, 201)
-    //     })
-    //     .catch(error => {
-    //         console.log(error)
-    //         response.error(req, res, 'Something went horrible wrong :(', 500)
-    //     })
+    // console.log(req.file.path)
+    // console.log(req.body)
+    const restaurant = req.body
+    restaurant.imageUrl = req.file.path
+    console.log(restaurant)
+    controller.addRestaurant(restaurant)
+        .then(addedRestaurant => {
+            response.success(req, res, addedRestaurant, 201)
+        })
+        .catch(error => {
+            console.log(error)
+            response.error(req, res, 'Something went horrible wrong :(', 500)
+        })
 })
 
 module.exports = router

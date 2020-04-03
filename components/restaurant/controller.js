@@ -1,16 +1,23 @@
 const storage = require('./storage')
 
-const addRestaurant = ({name = null, category = null, schedule = null, workDays = null, tags = null, menu = null, channel = null, website = null, phone = null, whatsapp = null, facebook = null, instagram = null, address = null}) => {
+const addRestaurant = ({name = null, category = null, opens = null, closes = null, mon = null, tue = null, wed = null, thu = null, fri = null, sat = null, sun = null, tags = null, menu = null, channel = null, website = null, phone = null, whatsapp = null, facebook = null, instagram = null, imageUrl = null, address = null}) => {
     return new Promise( async (resolve, reject) => {
-        if (!name || !category || !schedule || !workDays || !tags || !menu || !website || !phone || !address ) {
+        if (!name || !category || !opens || !closes || !tags || !menu || !website || !phone || !imageUrl || !address ) {
             console.log('Missing restaurant info')
             reject('Invalid data')
         }
         const restaurant = {
             name,
             category,
-            schedule,
-            workDays,
+            opens,
+            closes,
+            mon,
+            tue,
+            wed,
+            thu,
+            fri,
+            sat,
+            sun,
             tags,
             menu,
             channel,
@@ -19,6 +26,7 @@ const addRestaurant = ({name = null, category = null, schedule = null, workDays 
             whatsapp,
             facebook,
             instagram,
+            imageUrl,
             address
         }
 
