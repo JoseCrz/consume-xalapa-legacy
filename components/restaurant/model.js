@@ -59,18 +59,14 @@ const restaurantSchema = new Schema({
             type: String,
         }
     ],
-    order: {
-        channel: {
-            type: String,
-            required: true
-        },
-        info: {
-            type: String,
-            required: true
-        }
+    channel: {
+        type: String,
+        required: true
     },
     website: String,
     phone: String,
+    whatsapp: String,
+    facebook: String,
     address: String,
     updatedAt: {
         type: Date,
