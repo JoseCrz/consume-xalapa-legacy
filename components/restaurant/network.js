@@ -16,6 +16,10 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/add', (req, res) => {
+    res.render('addRestaurants.ejs')
+})
+
 router.post('/', (req, res) => {
     const restaurant = req.body
     // console.log(restaurant)
