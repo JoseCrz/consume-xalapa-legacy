@@ -3,8 +3,11 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 
+const config = require('./config/dbConfig')
 const routes = require('./network/routes')
 const db = require('./db')
+
+const port = config.port
 
 db.connect()
 
@@ -20,6 +23,6 @@ routes(app)
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.listen(3000, () => {
-    console.log('Listening on port 3000')
+app.listen(port, () => {
+    console.log(`listening on port: ${port}`)
 })
