@@ -22,13 +22,14 @@
                     <% restaurants.forEach(restaurant => { %>
                         <div class="c-biz">
                             <div class="c-biz__top">
-                                <img src="./img/jason.jpg" alt="" class="c-biz__image">
+                                <img src="/img/<%= restaurant.imageUrl %>" alt="" class="c-biz__image">
                             </div>
                             <div class="c-biz__bottom">
                                 <div class="c-biz__details">
                                     <p class="c-biz__category">Restaurant</p>
-                                    <p class="c-biz__hours">9:00AM - 3:00PM</p>
+                                    <p class="c-biz__hours"><%= restaurant.opens%> - <%= restaurant.closes %></p>
                                     <h2 class="c-biz__name"><%= restaurant.name %> </h2>
+                                    <!-- TODO: ADD DAYS -->
                                     <p class="c-biz__type"><%= restaurant.category %></p>
                                     <ul class="c-biz__orders-list">
                                         <% restaurant.tags.forEach(tag => { %>

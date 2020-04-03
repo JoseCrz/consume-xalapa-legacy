@@ -37,10 +37,10 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/', upload.single('image') ,(req, res) => {
-    // console.log(req.file.path)
+    console.log(req.file)
     // console.log(req.body)
     const restaurant = req.body
-    restaurant.imageUrl = req.file.path
+    restaurant.imageUrl = req.file.filename
     console.log(restaurant)
     controller.addRestaurant(restaurant)
         .then(addedRestaurant => {
