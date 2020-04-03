@@ -67,6 +67,7 @@ const restaurantSchema = new Schema({
     phone: String,
     whatsapp: String,
     facebook: String,
+    instagram: String,
     address: String,
     updatedAt: {
         type: Date,
