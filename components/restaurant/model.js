@@ -16,38 +16,41 @@ const restaurantSchema = new Schema({
         type: String,
         required: true
     },
-    schedule: {
-        opens: {
-            type: String,
-            required: true
-        },
-        closes: {
-            type: String,
-            required: true
-        }
+    opens: {
+        type: String,
+        required: true
     },
-    workDays: {
-        mon: {
-            type: Boolean,
-        },
-        tue: {
-            type: Boolean,
-        },
-        wed: {
-            type: Boolean,
-        },
-        thu: {
-            type: Boolean,
-        },
-        fri: {
-            type: Boolean,
-        },
-        sat: {
-            type: Boolean,
-        },
-        sun: {
-            type: Boolean,
-        },
+    closes: {
+        type: String,
+        required: true
+    },
+    mon: {
+        type: String,
+        default: 'off'
+    },
+    tue: {
+        type: String,
+        default: 'off'
+    },
+    wed: {
+        type: String,
+        default: 'off'
+    },
+    thu: {
+        type: String,
+        default: 'off'
+    },
+    fri: {
+        type: String,
+        default: 'off'
+    },
+    sat: {
+        type: String,
+        default: 'off'
+    },
+    sun: {
+        type: String,
+        default: 'off'
     },
     tags: [
         {
@@ -69,6 +72,10 @@ const restaurantSchema = new Schema({
     facebook: String,
     instagram: String,
     address: String,
+    imageUrl: {
+        type: String,
+        required: true
+    },
     updatedAt: {
         type: Date,
         default: Date.now
