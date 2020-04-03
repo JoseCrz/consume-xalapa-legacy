@@ -2,7 +2,48 @@
 <html lang="en">
 <%- include('./includes/head.ejs') %>
 <body>
-    <h2>Add Restaurant</h2> 
+    <h2>Add Restaurant</h2>
+    <!-- <form id="form" action="">
+
+    </form> -->
+    <button id="button">Try me!</button> 
     <%- include('./includes/footer.ejs') %>
+    <script>
+        const button = document.querySelector('#button')
+
+        button.addEventListener('click', () => {
+            const toSend = {
+                schedule: { opens: '9:00AM', closes: '3:00PM' },
+                workDays: {
+                    mon: true,
+                    tue: true,
+                    wed: true,
+                    thu: true,
+                    fri: true,
+                    sat: true,
+                    sun: false
+                },
+                active: true,
+                tags: [ 'tarjeta', 'efectivo', 'born in xalapa', 'domicilio', 'recoger' ],
+                menu: [ 'Bagel de Pera', 'Bagel de Huevo', 'Cold Brew', 'Alebrije' ],
+                name: 'Café Jasón',
+                category: 'Cafeteria de Especialidad',
+                channel: 'whatsapp',
+                website: 'https://cafejason.com',
+                phone: '2283558518',
+                whatsapp: '2283558518',
+                facebook: 'CafeJason/',
+                instagram: 'cafejasonoficial/',
+                address: 'Rojano #20',
+            }
+            const jsonString = JSON.stringify(toSend)
+
+            const xhr = new XMLHttpRequest()
+
+            xhr.open('POST', 'http://localhost:3000/restaurants')
+            xhr.setRequestHeader('Content-Type', 'application/json')
+            xhr.send(jsonString)
+        })
+    </script>
 </body>
 </html>
