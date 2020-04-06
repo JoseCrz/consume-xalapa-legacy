@@ -49,22 +49,22 @@
                                     <% if (restaurant.channel === 'whatsapp') { %>
                                         <a href="https://wa.me/521<%= restaurant.whatsapp %>?text=Quisiera%20hacer%20un%20pedido" class="c-biz__cta">Ordenar</a>
                                         <% } else if (restaurant.order.channel === 'facebook') { %>
-                                            <a href="http://fb.me/msg/<%= restaurant.faceook %>" class="c-biz__cta">Ordenar</a>
+                                            <a href="<%= restaurant.facebook %>" class="c-biz__cta">Ordenar</a>
                                             <% } else if (restaurant.order.channel === 'instagram') { %>
-                                                <a href="https://www.instagram.com/<%= restaurant.instagram %>" class="c-biz__cta">Ordenar</a>
+                                                <a href="<%= restaurant.instagram %>" class="c-biz__cta">Ordenar</a>
                                             <% } else { %>
                                                 <a href="tel:+521<%= restaurant.phone %>" class="c-biz__cta">Ordenar</a>
                                         <%}%> 
                                 </div>
                                 <div class="c-biz__info">
                                     <% if (restaurant.website) { %>
-                                        <a href="<%= restaurant.website %>" class="c-biz__link"><i class="icon-world"></i><%= restaurant.website %></a>
+                                        <a href="<%= restaurant.website %>" class="c-biz__link" target="_blank"><i class="icon-world"></i><%= restaurant.name %></a>
                                     <% } %>
                                     <% if (restaurant.phone) { %>
                                         <a href="tel:+521<%= restaurant.phone %>" class="c-biz__link"><i class="icon-phone"></i><%= restaurant.phone %></a>
                                     <% } %>
                                     <% if (restaurant.address) { %>
-                                        <a href="#" class="c-biz__link"><i class="icon-location"></i><%= restaurant.address %></a>
+                                        <p class="c-biz__link"><i class="icon-location"></i><%= restaurant.address %></p>
                                     <% } %>
                                 </div>
                             </div>

@@ -21,9 +21,17 @@
             <p class="c-form__button c-form__button--small" id="add-category">Agregar categoria</p>
             <p>Horario</p>
             <label class="c-form__label" for="opens">Abre</label>
-            <input class="c-form__input" name="opens" type="text">
+            <select name="opens" id="">
+                <% times.forEach(time => { %>
+                    <option value="<%= time %>"><%= time %></option>
+                <% }) %>
+            </select>
             <label class="c-form__label" for="closes">Cierra</label>
-            <input class="c-form__input" name="closes" type="text">
+            <select name="closes" id="">
+                <% times.forEach(time => { %>
+                    <option value="<%= time %>"><%= time %></option>
+                <% }) %>
+            </select>
             <p>Días de trabajo</p>
             <div class="c-form__days-container">
                 <label class="c-form__label c-form__label--day" for="mon">

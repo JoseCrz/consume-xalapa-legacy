@@ -37,7 +37,21 @@ router.get('/add', (req, res) => {
     categoryController.getCategories()
     .then(categories => {
         // console.log(categories)
-        res.render('addRestaurants.ejs', { categories:categories })
+        const numbers = []
+        for (let i = 0; i<=1380; i+=60){
+            numbers.push((i/60))
+        }
+        const times = numbers.map(item => {
+            if (item > 11) {
+                if (item === 12) {
+                    return "12:00PM"
+                }
+                return `${item-12}:00PM`
+            } else {
+                return `${item}:00AM`
+            }
+        })
+        res.render('addRestaurants.ejs', { categories:categories, times:times })
     }).catch(error => {
         console.log(error)
         response.error(req, res, 'Could not get categories', 401)
