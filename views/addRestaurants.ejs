@@ -2,82 +2,88 @@
 <html lang="en">
 <%- include('./includes/head.ejs') %>
 <body>
-    <h2>Add Restaurant</h2>
-    <form id="form" action="">
-        <label for="name">Nombre del Negocio</label>
-        <input name="name" type="text">
-        <label for="category">Categoria del Restaurante</label>
-        <select id="" name="category">
-            <% if (categories.length > 0) { %>
-                <% categories.forEach(category => { %>
-                    <option value="<%= category.name %>"><%= category.name %></option>
-                <% }) %>
-            <% } %>
-        </select>
-        <input id="category-name" name="new-category" type="text">
-        <p id="add-category" style="cursor: pointer; background: lime; padding: 12px 25px; display: inline-block; ">Agregar categoria</p>
-        <p>Horario</p>
-        <label for="opens">Abre</label>
-        <input name="opens" type="text">
-        <label for="closes">Cierra</label>
-        <input name="closes" type="text">
-        <p>Días de trabajo</p>
-        <label for="mon">
-            Lunes
-            <input type="checkbox" name="mon" id="">
-        </label>
-        <label for="tue">
-            Martes
-            <input type="checkbox" name="tue" id="">
-        </label>
-        <label for="wed">
-            Miercoles
-            <input type="checkbox" name="wed" id="">
-        </label>
-        <label for="thu">
-            Jueves
-            <input type="checkbox" name="thu" id="">
-        </label>
-        <label for="fri">
-            Viernes
-            <input type="checkbox" name="fri" id="">
-        </label>
-        <label for="sat">
-            Sabado
-            <input type="checkbox" name="sat" id="">
-        </label>
-        <label for="sun">
-            Domingo
-            <input type="checkbox" name="sun" id="">
-        </label>
-        <label for="tags">Etiquetas</label>
-        <input type="text" name="tags" id="">
-        <label for="menu">Menu reducido</label>
-        <input type="text" name="menu" id="">
-        <label for="phone">Telefono</label>
-        <input type="number" name="phone" id="">
-        <label for="whatsapp">WhatsApp</label>
-        <input type="number" name="whatsapp" id="">
-        <label for="facebook">facebook</label>
-        <input type="text" name="facebook" id="">
-        <label for="instagram">instagram</label>
-        <input type="text" name="instagram" id="">
-        <label for="channel">Recibir pedidos</label>
-        <select id="" name="channel">
-            <option value="whatsapp">WhatsApp</option>
-            <option value="phone">Telefono</option>
-            <option value="facebook">Facebook</option>
-            <option value="instagram">Instagram</option>
-        </select>
-        <label for="website">website</label>
-        <input type="text" name="website" id="">
-        <label for="address">dirección</label>
-        <input type="text" name="address" id="">
-        <label for="image">Imagen</label>
-        <input type="file" name="image" id="">
-        <button id="button">Enviar</button> 
-    </form>
-    <%- include('./includes/footer.ejs') %>
+    <div class="u-wrapper">
+        <%- include('./includes/header.ejs') %>
+        <h2 class="c-form__title">Add Restaurant</h2>
+        <form class="c-form" id="form" action="">
+            <label class="c-form__label" for="name">Nombre del Negocio</label>
+            <input class="c-form__input" name="name" type="text">
+            <label class="c-form__label" for="category">Categoria del Restaurante</label>
+            <select id="" name="category">
+                <% if (categories.length > 0) { %>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.name %>"><%= category.name %></option>
+                    <% }) %>
+                <% } %>
+            </select>
+            <label class="c-form__label" for="">En caso de no existir la categoría necesaria:</label>
+            <input class="c-form__input" id="category-name" name="new-category" type="text">
+            <p class="c-form__button c-form__button--small" id="add-category">Agregar categoria</p>
+            <p>Horario</p>
+            <label class="c-form__label" for="opens">Abre</label>
+            <input class="c-form__input" name="opens" type="text">
+            <label class="c-form__label" for="closes">Cierra</label>
+            <input class="c-form__input" name="closes" type="text">
+            <p>Días de trabajo</p>
+            <div class="c-form__days-container">
+                <label class="c-form__label c-form__label--day" for="mon">
+                    Lunes
+                </label>
+                <input class="c-form__input" type="checkbox" name="mon" id="">
+                <label class="c-form__label c-form__label--day" for="tue">
+                    Martes
+                </label>
+                <input class="c-form__input" type="checkbox" name="tue" id="">
+                <label class="c-form__label c-form__label--day" for="wed">
+                    Miercoles
+                </label>
+                <input class="c-form__input" type="checkbox" name="wed" id="">
+                <label class="c-form__label c-form__label--day" for="thu">
+                    Jueves
+                </label>
+                <input class="c-form__input" type="checkbox" name="thu" id="">
+                <label class="c-form__label c-form__label--day" for="fri">
+                    Viernes
+                </label>
+                <input class="c-form__input" type="checkbox" name="fri" id="">
+                <label class="c-form__label c-form__label--day" for="sat">
+                    Sabado
+                </label>
+                <input class="c-form__input" type="checkbox" name="sat" id="">
+                <label class="c-form__label c-form__label--day" for="sun">
+                    Domingo
+                </label>
+                <input class="c-form__input" type="checkbox" name="sun" id="">
+            </div>
+            <label class="c-form__label" for="tags">Etiquetas</label>
+            <input class="c-form__input" type="text" name="tags" id="">
+            <label class="c-form__label" for="menu">Menu reducido</label>
+            <input class="c-form__input" type="text" name="menu" id="">
+            <label class="c-form__label" for="phone">Telefono</label>
+            <input class="c-form__input" type="number" name="phone" id="">
+            <label class="c-form__label" for="whatsapp">WhatsApp</label>
+            <input class="c-form__input" type="number" name="whatsapp" id="">
+            <label class="c-form__label" for="facebook">facebook</label>
+            <input class="c-form__input" type="text" name="facebook" id="">
+            <label class="c-form__label" for="instagram">instagram</label>
+            <input class="c-form__input" type="text" name="instagram" id="">
+            <label class="c-form__label" for="channel">Recibir pedidos</label>
+            <select id="" name="channel">
+                <option value="whatsapp">WhatsApp</option>
+                <option value="phone">Telefono</option>
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+            </select>
+            <label class="c-form__label" for="website">website</label>
+            <input class="c-form__input" type="text" name="website" id="">
+            <label class="c-form__label" for="address">dirección</label>
+            <input class="c-form__input" type="text" name="address" id="">
+            <label class="c-form__label" for="image">Imagen</label>
+            <input class="c-form__input" type="file" name="image" id="">
+            <button class="c-form__button" id="button">Enviar</button> 
+        </form>
+        <%- include('./includes/footer.ejs') %>
+    </div>
     <script>
         const $form = document.querySelector('#form')
         const $categoryButton = document.querySelector('#add-category')
@@ -103,46 +109,6 @@
                 body: formData
             })
         })
-
-
-
-
-
-        // const button = document.querySelector('#button')
-
-        // button.addEventListener('click', () => {
-        //     const toSend = {
-        //         schedule: { opens: '9:00AM', closes: '3:00PM' },
-        //         workDays: {
-        //             mon: true,
-        //             tue: true,
-        //             wed: true,
-        //             thu: true,
-        //             fri: true,
-        //             sat: true,
-        //             sun: false
-        //         },
-        //         active: true,
-        //         tags: [ 'tarjeta', 'efectivo', 'born in xalapa', 'domicilio', 'recoger' ],
-        //         menu: [ 'Bagel de Pera', 'Bagel de Huevo', 'Cold Brew', 'Alebrije' ],
-        //         name: 'Café Jasón',
-        //         category: 'Cafeteria de Especialidad',
-        //         channel: 'whatsapp',
-        //         website: 'https://cafejason.com',
-        //         phone: '2283558518',
-        //         whatsapp: '2283558518',
-        //         facebook: 'CafeJason/',
-        //         instagram: 'cafejasonoficial/',
-        //         address: 'Rojano #20',
-        //     }
-        //     const jsonString = JSON.stringify(toSend)
-
-        //     const xhr = new XMLHttpRequest()
-
-        //     xhr.open('POST', 'http://localhost:3000/restaurants')
-        //     xhr.setRequestHeader('Content-Type', 'application/json')
-        //     xhr.send(jsonString)
-        // })
     </script>
 </body>
 </html>
