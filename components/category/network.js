@@ -5,6 +5,17 @@ const controller = require('./controller')
 
 const router = express.Router()
 
+router.get('/', (req, res) => {
+    controller.getCategories()
+    .then(categories => {
+        console.log(categories)
+    })
+    .catch(error => {
+        console.log(error)
+        response.error(req, res, 'Internal Server Error', 500)
+    })
+})
+
 router.post('/', (req, res) => {
     // http://localhost:3000/category?name=mexicana
     const name = req.query.name

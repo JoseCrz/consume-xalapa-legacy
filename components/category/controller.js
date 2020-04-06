@@ -15,6 +15,14 @@ const addCategory = (name = null) => {
     })
 }
 
+const getCategories = () => {
+    return new Promise(async (resolve, reject) => {
+        const categories = await storage.getCategories()
+        resolve(categories)
+    })
+}
+
 module.exports = {
     addCategory,
+    getCategories
 }
