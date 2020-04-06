@@ -7,19 +7,15 @@
         <label for="name">Nombre del Negocio</label>
         <input name="name" type="text">
         <label for="category">Categoria del Restaurante</label>
-        <input name="category" type="text">
         <select id="" name="category">
-            <option value="cafeteria">cafeteria</option>
-            <option value="cafeteria de especialidad">cafeteria de especialidad</option>
-            <option value="mexicana">mexicana</option>
-            <option value="italiana">italiana</option>
-            <option value="china">china</option>
-            <option value="japonesa">japonesa</option>
-            <option value="tradicional">tradicional</option>
-            <option value="snacks">snacks</option>
-            <option value="reposteria">reposteria</option>
-            <option value="reposteria">reposteria</option>
+            <% if (categories.length > 0) { %>
+                <% categories.forEach(category => { %>
+                    <option value="<%= category.name %>"><%= category.name %></option>
+                <% }) %>
+            <% } %>
         </select>
+        <input id="category-name" name="new-category" type="text">
+        <p id="add-category" style="cursor: pointer; background: lime; padding: 12px 25px; display: inline-block; ">Agregar categoria</p>
         <p>Horario</p>
         <label for="opens">Abre</label>
         <input name="opens" type="text">
@@ -84,6 +80,20 @@
     <%- include('./includes/footer.ejs') %>
     <script>
         const $form = document.querySelector('#form')
+        const $categoryButton = document.querySelector('#add-category')
+
+        $categoryButton.addEventListener('click', () => {
+            const categoryName = document.querySelector('#category-name').value
+            fetch(`/category?name=${categoryName}`, {
+                method: 'POST',
+                body: {}
+            }).then(response => {
+                alert('Categoria agregada')
+                location.reload()
+            }).catch(error => {
+                alert('Algo salió mal :(')
+            })
+        })
 
         $form.addEventListener('submit', event => {
             event.preventDefault()

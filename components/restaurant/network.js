@@ -2,6 +2,7 @@ const express = require('express')
 const multer = require('multer')
 const response = require('../../network/response')
 const controller = require('./controller')
+const categoryController = require('../category/controller')
 
 const router = express.Router()
 
@@ -33,7 +34,14 @@ router.get('/', (req, res) => {
 })
 
 router.get('/add', (req, res) => {
-    res.render('addRestaurants.ejs')
+    categoryController.getCategories()
+    .then(categories => {
+        // console.log(categories)
+        res.render('addRestaurants.ejs', { categories:categories })
+    }).catch(error => {
+        console.log(error)
+        response.error(req, res, 'Could not get categories', 401)
+    })
 })
 
 router.post('/', upload.single('image') ,(req, res) => {
