@@ -115,6 +115,12 @@
             fetch('/restaurants', {
                 method: 'POST',
                 body: formData
+            }).then(response => {
+                alert('Agregado restaurante')
+                location.reload()
+            }).catch(error => {
+                console.log(error)
+                alert('Algo salió mal, cuentaselo a quien mas confianza le tengas y a José, principalmente a José, corre.')
             })
         })
     </script>
