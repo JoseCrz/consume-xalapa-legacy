@@ -56,7 +56,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/add', (req, res) => {
+router.get('/noiseless-peaceful-morning', (req, res) => {
     categoryController.getCategories()
     .then(categories => {
         // console.log(categories)
