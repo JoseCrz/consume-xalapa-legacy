@@ -1,24 +1,47 @@
 const express = require('express')
+const aws = require('aws-sdk')
 const multer = require('multer')
+const multerS3 = require('multer-s3')
+const config = require('../../config/dbConfig')
 const response = require('../../network/response')
 const controller = require('./controller')
 const categoryController = require('../category/controller')
 
 const router = express.Router()
 
-const multerStorage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'public/img/')
-    },
-    filename: (req, file, cb) => {
-        const splitedName = file.originalname.split('.')
-        const extension = splitedName[splitedName.length - 1]
-        cb(null, `${Date.now()}.${extension}`)
-    }
+aws.config.update({
+    secretAccessKey: config.aws.secretAccessKey,
+    accessKeyId: config.aws.accessKey,
+    region: 'us-east-2'
 })
 
+const s3 = new aws.S3()
+
+// const multerStorage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, 'public/img/')
+//     },
+//     filename: (req, file, cb) => {
+//         const splitedName = file.originalname.split('.')
+//         const extension = splitedName[splitedName.length - 1]
+//         cb(null, `${Date.now()}.${extension}`)
+//     }
+// })
+
 const upload = multer({
-    storage: multerStorage
+    storage: multerS3({
+        s3: s3,
+        bucket: 'consumexalapa',
+        acl: 'public-read',
+        metadata: (req, file, cb) => {
+            cb(null, {fieldName: file.fieldname})
+        },
+        key: (req, file, cb) => {
+            const splitedName = file.originalname.split('.')
+            const extension = splitedName[splitedName.length - 1]
+            cb(null, `${Date.now()}.${extension}`)
+        }
+    })
 })
 
 router.get('/', (req, res) => {
@@ -61,8 +84,9 @@ router.get('/add', (req, res) => {
 router.post('/', upload.single('image') ,(req, res) => {
     console.log(req.file)
     // console.log(req.body)
+
     const restaurant = req.body
-    restaurant.imageUrl = req.file.filename
+    restaurant.imageUrl = req.file.location
     console.log(restaurant)
     controller.addRestaurant(restaurant)
         .then(addedRestaurant => {
