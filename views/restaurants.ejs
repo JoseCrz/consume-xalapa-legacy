@@ -48,9 +48,9 @@
                                 <div class="c-biz__actions">
                                     <% if (restaurant.channel === 'whatsapp') { %>
                                         <a href="https://wa.me/521<%= restaurant.whatsapp %>?text=Quisiera%20hacer%20un%20pedido" class="c-biz__cta">Ordenar</a>
-                                        <% } else if (restaurant.order.channel === 'facebook') { %>
+                                        <% } else if (restaurant.channel === 'facebook') { %>
                                             <a href="<%= restaurant.facebook %>" class="c-biz__cta">Ordenar</a>
-                                            <% } else if (restaurant.order.channel === 'instagram') { %>
+                                            <% } else if (restaurant.channel === 'instagram') { %>
                                                 <a href="<%= restaurant.instagram %>" class="c-biz__cta">Ordenar</a>
                                             <% } else { %>
                                                 <a href="tel:+521<%= restaurant.phone %>" class="c-biz__cta">Ordenar</a>
