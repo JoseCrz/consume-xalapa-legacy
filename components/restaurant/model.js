@@ -79,6 +79,10 @@ const restaurantSchema = new Schema({
     updatedAt: {
         type: Date,
         default: Date.now
+    },
+    priority: {
+        type: Number,
+        default: 5
     }
 })
 
