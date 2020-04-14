@@ -27,8 +27,20 @@
     }
 
     &__link {
+        
         &:hover {
             color: var(--primary);
+        }
+
+        &--cta{
+           background: var(--primary);
+           color: var(--text-cta);
+           padding: 5px 10px;
+           border-radius: 5px;
+
+           &:hover{
+               color: var(--text-cta);
+           }
         }
     }
 
