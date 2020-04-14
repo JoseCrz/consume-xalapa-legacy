@@ -10,6 +10,28 @@
         margin: 0 auto;
     }
 
+    &__title-container{
+        text-align: center;
+        margin-bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__title{
+        color: var(--text);
+        font-weight: 800;
+        font-size: 2.5em;
+        margin-right: 20px;
+
+        &--highlight{
+            color: var(--primary);
+            font-size: 4.3em;
+        }
+    }
+
+
     @include iphone-8 {
         &__container {
             max-width: 100%;
