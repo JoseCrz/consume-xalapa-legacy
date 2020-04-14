@@ -11,6 +11,7 @@
     --primary: #C05746;
     --accent: #43AA8B;
     --text:#2F323A;
+    --text-light: rgba(67, 72, 83, .7);
     --text-cta: #F2F7F2;
     --logo-font: 'Montserrat', sans-serif;
     
@@ -88,3 +89,4 @@ a {
 @import './components/form';
 @import './components/mobile-menu';
 @import './components/footer';
+@import './components/marquee';

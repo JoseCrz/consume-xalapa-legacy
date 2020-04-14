@@ -4,8 +4,30 @@
 <body>
   <div class="u-wrapper">
     <%- include('./includes/header.ejs') %>
-    
-    <%- include('./includes/footer.ejs') %>
-  </body>
+
+    <section class="c-marquee">
+      <div class="c-marquee__container">
+        <div class="c-marquee__title-container">
+          <img class="c-marquee__image" src="/img/location.png" alt="">
+          <h1 class="c-marquee__title">ma<span class="c-marquee__highlight">pa</span></h1>
+        </div>
+        <h2 class="c-marquee__subtitle">Encuentra la ubicación de tu<br><span class="c-marquee__subtitle-highlight">local favorito o exploralos todos</span></h2>
+      </div>
+    </section>
+    <!-- SECTION MAPA -->
+    <section id="mapa" class="c-section">
+      <!-- <p class="c-section__description">Quisimos hacerte fácil llegar al lugar. También ver si no queda tan lejos de tu hogar y si el servicio de entrega no te cobrará tan caro. Busca tu local aquí.</!--> -->
+      <div class="c-map">
+          <div class="c-map__container">
+              <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+              <div class="elfsight-app-2ad37fcd-c6aa-442a-b83e-1e3503acf41f"></div>
+          </div>
+      </div>
+  </section>
+  <div class="c-text">
+    <p class="c-text__txt"><span class="c-text__highlight">50+  </span>negocios disponibles</p>
   </div>
+    <%- include('./includes/footer.ejs') %>
+  </div>
+  </body>
 </html>
