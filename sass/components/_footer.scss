@@ -2,30 +2,59 @@
     text-align: center;
     padding-bottom: 50px;
 
-    &__link {
-        &:hover {
-            text-decoration: underline;
-        }
+      &__top{
+          display: flex;
+          justify-content: flex-end;
+          
+      }
 
-        &--memo {
-            &:hover {
-                color: #ffeb3b;
-            }
-        }
-        &--rene {
-            &:hover {
-                color: #cddc39;
-            }
-        }
-        &--jose {
-            &:hover {
-                color: #8bc34a;
-            }
-        }
-        &--dtt {
-            &:hover {
-                color: #03a9f4;
-            }
-        }
-    }
+      &__container{
+          display: flex;
+          align-items: center;
+      }
+
+      &__button{
+          margin-left: 10px;
+          padding: 4px 8px;
+          border-radius: 10px;
+          border: 1px solid var(--text);
+
+          &:hover{
+            background: var(--text);
+            color: #fff;
+          }
+
+
+      }
+
+      &__credits{
+            color: var(--text);
+      }
+
+    // &__link {
+    //     &:hover {
+    //         text-decoration: underline;
+    //     }
+
+    //     &--memo {
+    //         &:hover {
+    //             color: #ffeb3b;
+    //         }
+    //     }
+    //     &--rene {
+    //         &:hover {
+    //             color: #cddc39;
+    //         }
+    //     }
+    //     &--jose {
+    //         &:hover {
+    //             color: #8bc34a;
+    //         }
+    //     }
+    //     &--dtt {
+    //         &:hover {
+    //             color: #03a9f4;
+    //         }
+    //     }
+    // }
 }
