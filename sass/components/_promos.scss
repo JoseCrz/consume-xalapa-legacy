@@ -1,18 +1,18 @@
 .c-promos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px 0px;
+    gap: 50px;
     margin: 60px 0px;
     
     &__card{
         justify-self: center;
-        width: 500px;
-        height: 300px;
-        //border: 1px solid black;
-        border-radius: 20px;
-        box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 30px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 50px;
         grid-template-areas: 
             "discount price"
             "conditions conditions";
@@ -22,36 +22,24 @@
     
     &__discount{
         grid-area: discount;
-        text-align: left;
-        font-size: 1.5em;
+        text-align: center;
+        font-size: 2.5em;
         line-height: 1em;
-
-        &--big{
-            font-size: 2.8em;
-        }
+        padding: 0px 15px;
     }
     
     &__price{
-        align-self: flex-end;
-        margin: 0;
         color: var(--primary);
         grid-area: price;
         text-align: center;
-        font-size: 1.8em;
+        font-size: 2.5em;
         line-height: 1em;
-
-        &--bignum{
-            font-size: 4em;
-        }
-
-        &--small{
-            line-height: 0em;
-            font-size: 0.5em;
-        }
+        padding: 0px 15px;
     }
     
     &__conditions{
         grid-area: conditions;
+        color: var(--text-light);
     }
 }
 
