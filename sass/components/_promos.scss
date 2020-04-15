@@ -22,10 +22,32 @@
     
     &__discount{
         grid-area: discount;
+        text-align: left;
+        font-size: 1.5em;
+        line-height: 1em;
+
+        &--big{
+            font-size: 2.8em;
+        }
     }
     
     &__price{
+        align-self: flex-end;
+        margin: 0;
+        color: var(--primary);
         grid-area: price;
+        text-align: center;
+        font-size: 1.8em;
+        line-height: 1em;
+
+        &--bignum{
+            font-size: 4em;
+        }
+
+        &--small{
+            line-height: 0em;
+            font-size: 0.5em;
+        }
     }
     
     &__conditions{
