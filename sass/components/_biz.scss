@@ -32,6 +32,7 @@
         font-size: 1.8em;
         margin: 0;
         letter-spacing: 2px;
+        text-transform: capitalize;
     }
 
     &__type {
@@ -86,6 +87,7 @@
 
     &__menu-list {
         margin: 0;
+        text-transform: capitalize;
     }
 
     &__actions {
@@ -105,10 +107,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
 
         &:hover{
             transform: translateY(-5px);
-            transition: .3s;
         }
 
         &--hollow {
