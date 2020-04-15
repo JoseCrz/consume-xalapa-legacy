@@ -105,10 +105,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover{
+            transform: translateY(-5px);
+            transition: .3s;
+        }
+
         &--hollow {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary)
+            
         }
     }
 
