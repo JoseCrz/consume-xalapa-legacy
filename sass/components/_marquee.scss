@@ -6,10 +6,18 @@
         display: flex;
         align-items: baseline;
         justify-content: center;
+
+        &--nonbase{
+            align-items: initial;
+        }
     }
 
     &__image{
         width: 50px;
+
+        &--big{
+            width: 95px;
+        }
     }
 
     &__title{
