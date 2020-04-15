@@ -68,6 +68,7 @@
         margin: 0 3px;
         font-weight: bold;
         span {
+            text-transform: capitalize;
             background: var(--primary);
             color: var(--body);
             padding: 3px;
