@@ -1,6 +1,10 @@
 .c-need{
     display: flex;
     margin: 100px 0px;
+
+    &-space{
+        height: 500px;
+    }
     
     &__figure{
         width: 1500px;
@@ -18,5 +22,9 @@
 
     &__text{
         font-size: 1.5em;
+    }
+
+    &__left{
+        align-self: center;
     }
 }

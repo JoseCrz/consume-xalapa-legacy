@@ -5,6 +5,24 @@
     font-size: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+    &-landing{
+        position: absolute;
+        left: 50%;
+        &--second{
+            position: absolute;
+            margin-top: 30px;
+            left: 58%;
+            transform: rotateZ(5deg);
+        }
+
+        &--third{
+            position: absolute;
+            margin-top:70px;
+            left: 66%;
+            transform: rotateZ(10deg);
+        }
+    }
+
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
