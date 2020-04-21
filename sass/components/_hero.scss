@@ -32,6 +32,12 @@
         border-radius: 5px;
         background-color: var(--primary);
         color: var(--body);
+        cursor: pointer;
+        transition: cubic-bezier(0.6, -0.28, 0.735, 0.045).3s;
+
+        &:hover{
+            transform: translateY(10px);
+        }
     }
 
     &__message{
