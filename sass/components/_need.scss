@@ -2,6 +2,15 @@
     display: flex;
     margin: 100px 0px;
 
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+            "figure title info"
+            "figure . info";
+    }
+
     &-space{
         height: 500px;
     }
@@ -9,19 +18,35 @@
     &__figure{
         width: 1500px;
         height: 400px;
+
+        &-grid{
+            grid-area: figure;
+        }
     }
 
-    &__store{
+    &__img{
         width: 100%;
         height: 100%;
+
+        &-grid{
+            grid-area: img;
+        }
     }
 
     &__title{
         font-size: 3em;
+
+        &-grid{
+            grid-area: title;
+        }
     }
 
     &__text{
         font-size: 1.5em;
+
+        &-grid{
+            grid-area: info;
+        }
     }
 
     &__left{
