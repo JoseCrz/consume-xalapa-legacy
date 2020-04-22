@@ -5,6 +5,13 @@
     border-radius: 30px;
     text-align: center;
     margin: 40px 0px;
+
+    &-flex{
+        padding: 50px 0px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     
     &__content{
         padding: 150px 0px;
@@ -24,9 +31,23 @@
         font-size: 1.4em;
         margin: 0;
         margin-bottom: 40px;
+
+        &-join{
+            font-size: 3em;
+            margin: 0;
+            text-align: left;
+
+            &--span{
+                font-weight: normal;
+                color: var(--text-light);
+            }
+        }
     }
 
     &__button{
+        display: inline-flex;
+        width: fit-content;
+        height: fit-content;
         padding: 15px 60px;
         border: 1px solid var(--primary);
         border-radius: 5px;
@@ -35,8 +56,12 @@
         cursor: pointer;
         transition: cubic-bezier(0.6, -0.28, 0.735, 0.045).3s;
 
+        &-bigger{
+            font-size: 1.8em;
+        }
+
         &:hover{
-            transform: translateY(10px);
+            transform: translateY(-10px);
         }
     }
 
