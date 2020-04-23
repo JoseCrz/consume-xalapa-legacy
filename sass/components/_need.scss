@@ -1,6 +1,6 @@
 .c-need{
     display: flex;
-    margin: 100px 0px;
+    margin: 100px 0px 0px 0px;
 
     &-grid{
         display: grid;
@@ -34,10 +34,6 @@
     &__img{
         width: 100%;
         height: 100%;
-
-        &-grid{
-            grid-area: img;
-        }
     }
 
     &__title{
@@ -82,7 +78,7 @@
         align-self: center;
     }
 
-    &__rectangle{       
+    &__rectangle{      
         transform: translateX(-160px);
         grid-area: rec;
         text-align: left;
