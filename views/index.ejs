@@ -1,112 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./includes/head.ejs') %> 
+<%- include('./includes/head.ejs')%>
 <body>
     <div class="u-wrapper">
-        <%- include('./includes/header.ejs') %>
-        <!-- SECTION HERO -->
+        <%- include('./includes/header.ejs')%>    
         <section class="c-hero" id="inicio">
-            <h1 class="c-hero__title">Apoya a los negocios locales</h1>
-            <p class="c-hero__description">La cuarentena afecta principalmente a los negocios locales pequeños, esos que dependen de nuestro consumo diario. No dejemos que desistan en la lucha por permanecer operando y apoyémoslos.
-                Este sitio está hecho para que encuentres de forma rápida y sencilla estos negocios. Queremos hacerlo fácil para que contactes con ellos y puedas hacerles pedidos los cuales contribuiran a su permanencia.
-                Este proyecto es de uso gratuito para todos aquellos que quieran inscribir su negocio. Es una conexión directa de la cual no obtendremos ninguna comisión. Así que ¡VENGA! apóya lo más que puedas :)</p>
-                <a href="#negocios" class="c-mouse">
-                    <span></span>
-                </a>
-        </section>
-        <!-- SECTION NEGOCIOS -->
-        <section id="negocios" class="c-section">
-            <h2 class="c-section__title">Encuentra tu opción ideal</h2>
-            <div class="c-biz__container">
-                <% if (restaurants. length > 0) { %>
-                    <% restaurants.forEach(restaurant => { %>
-                        <div class="c-biz">
-                            <div class="c-biz__top">
-                                <img src="<%= restaurant.imageUrl %>" alt="" class="c-biz__image">
-                            </div>
-                            <div class="c-biz__bottom">
-                                <div class="c-biz__details">
-                                    <p class="c-biz__category">Restaurant</p>
-                                    <p class="c-biz__hours"><%= restaurant.opens%> - <%= restaurant.closes %></p>
-                                    <h2 class="c-biz__name"><%= restaurant.name %> </h2>
-                                    <!-- TODO: ADD DAYS -->
-                                    <p class="c-biz__type"><%= restaurant.category %></p>
-                                    <ul class="c-biz__orders-list">
-                                        <% restaurant.tags.forEach(tag => { %>
-                                            <li class="c-biz__order"><span><%= tag %> </span></li>
-                                        <% }) %>
-                                    </ul>
-                                </div>
-                                <div class="c-biz__menu">
-                                    <h3 class="c-biz__menu-title">Favoritos:</h3>
-                                    <ul class="c-biz__menu-list">
-                                        <% restaurant.menu.forEach(item => { %>
-                                            <li class="c-biz__menu-item"><%= item %></li>
-                                        <% }) %>
-                                    </ul>
-                                </div>
-                                <div class="c-biz__actions">
-                                    <% if (restaurant.channel === 'whatsapp') { %>
-                                        <a href="https://wa.me/521<%= restaurant.whatsapp %>?text=Quisiera%20hacer%20un%20pedido" class="c-biz__cta">Ordenar</a>
-                                        <% } else if (restaurant.channel === 'facebook') { %>
-                                            <a href="<%= restaurant.facebook %>" class="c-biz__cta">Ordenar</a>
-                                            <% } else if (restaurant.channel === 'instagram') { %>
-                                                <a href="<%= restaurant.instagram %>" class="c-biz__cta">Ordenar</a>
-                                            <% } else { %>
-                                                <a href="tel:+521<%= restaurant.phone %>" class="c-biz__cta">Ordenar</a>
-                                        <%}%> 
-                                </div>
-                                <div class="c-biz__info">
-                                    <% if (restaurant.website) { %>
-                                        <a href="<%= restaurant.website %>" class="c-biz__link" target="_blank"><i class="icon-world"></i><%= restaurant.name %></a>
-                                    <% } %>
-                                    <% if (restaurant.phone) { %>
-                                        <a href="tel:+521<%= restaurant.phone %>" class="c-biz__link"><i class="icon-phone"></i><%= restaurant.phone %></a>
-                                    <% } %>
-                                    <% if (restaurant.address) { %>
-                                        <p class="c-biz__link"><i class="icon-location"></i><%= restaurant.address %></p>
-                                    <% } %>
-                                </div>
-                            </div>
-                        </div>
-                    <% }) %>
-                
-                <% } else { %>
-                    <h2 class="c-section__title">No restaurants yet!</h2>
-                 <% } %>
+            <div class="c-hero__content">
+                <h1 class="c-hero__title">consume<span class="c-hero__title c-marquee__highlight">xalapa</span></h1>
+                <h3 class="c-hero__slogan">Restaurantes asombrosos reunidos en un mismo lugar</h3>
+                <a class="c-hero__button">Explora los locales</a>
+                <p class="c-hero__message"><small class="c-hero__message">Con tu compra ayudas a que los negocios en Xalapa<br>puedan seguir dando productos chingones.</small></p>
             </div>
         </section>
-        <!-- SECTION CONTACTO -->
-        <section id="contacto" class="c-section">
-            <h2 class="c-section__title c-section__title--logo-below">Unete a</h2>
-            <h2 class="c-logo c-logo--big">consume<span class="c-logo__highlight">xalapa</span>.com</h2>
-            <p class="c-section__description">Dejanos tus datos y nos comunicaremos contigo a la brevedad</p>
-            <div class="u-wrapper u-wrapper--mini"> 
-                <!-- <form class="c-form" action="https://formspree.io/xyyprdbr" method="POST">
-                    <label class="c-form__label">Nombre de tu negocio</label>
-                    <input class="c-form__input" type="text" name="negocio">
-                    <label class="c-form__label">Tu nombre</label>
-                    <input class="c-form__input" type="text" name="nombre">
-                    <label class="c-form__label">Correo electrónico</label>
-                    <input class="c-form__input" type="text" name="email">
-                    <button class="c-form__button" type="submit">Enviar</button>
-                </form> -->
-
-                <div class="c-form">
-                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-                    <script>
-                        hbspt.forms.create({
-                        portalId: "7416801",
-                        formId: "37679158-059c-4b48-a648-55540d9c51fb"
-                        });
-                    </script>
+        <section class="c-need">
+            <img src="/img/cafe1.png" alt="" class="c-need__img c-need__img-undefined">
+            <div>
+                <h3 class="c-need__title">¡Te necesitamos!</h3>
+                <p class="c-need__text">Hoy más que nunca los medianos y pequeños negocios nacidos en Xalapa te necesitan para poder seguir. Ganemos juntos la batalla vs el COVID-19 y pongamos de nuestra para regresar todos juntos a la normalidad.</p>
+            </div>
+        </section>
+        <section class="c-hero">
+            <div class="c-hero__content">
+                <h3 class="c-hero__title c-hero__title-smaller">Consume <span class="c-hero__title c-hero__title-smaller c-marquee__highlight">Seguro</span></h3>
+                <p class="c-hero__slogan">Los lugares que están registrados en nuestra plataforma tomarán<br>todas las precauciones para llevarte la comida sana y salva a casa.</p>
+                <ul class="c-hero__imglist">
+                    <li class="c-hero__imgs"></li>
+                    <li class="c-hero__arrow">&rarr;</li>
+                    <li class="c-hero__imgs"></li>
+                    <li class="c-hero__arrow">&rarr;</li>
+                    <li class="c-hero__imgs"></li>
+                </ul>
+            </div>
+        </section>
+        <section class="c-need c-need-space">
+            <div class="c-need__left">
+                <h3 class="c-need__title">Gracias a ti</h3>
+                <p class="c-need__text c-need__text-space">Más de <b>50+ </b>negocios locales<br>registrados en Consume Xalapa</p>
+            </div>
+            <div class="c-biz c-biz-landing c-biz-landing--third">
+                <div class="c-biz__top">
+                    <img src="./img/jason.jpg" alt="" class="c-biz__image">
+                </div>
+                <div class="c-biz__bottom">
+                    <div class="c-biz__details">
+                        <p class="c-biz__category">Restaurant</p>
+                        <p class="c-biz__hours">9:00AM - 3:00PM</p>
+                        <h2 class="c-biz__name">Café Jasón</h2>
+                        <p class="c-biz__type">Café de Especialidad</p>
+                        <ul class="c-biz__orders-list">
+                            <li class="c-biz__order"><span>Recoger</span></li>
+                            <li class="c-biz__order"><span>Domicilio</span></li>
+                            <li class="c-biz__order"><span>Sin contacto</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-biz__menu">
+                        <h3 class="c-biz__menu-title">Platillos favoritos:</h3>
+                        <ul class="c-biz__menu-list">
+                            <li class="c-biz__menu-item">Bagel de Huevo con Jamón</li>
+                            <li class="c-biz__menu-item">Bagel de Pera</li>
+                            <li class="c-biz__menu-item">Café Latte</li>
+                            <li class="c-biz__menu-item">Café Americano</li>
+                        </ul>
+                    </div>
+                    <div class="c-biz__actions">
+                        <a href="https://wa.me/5212283558518?text=Quisiera%20hacer%20un%20pedido" class="c-biz__cta">Ordenar</a>
+                        <!-- <a href="#" class="c-biz__cta c-biz__cta--hollow">Gift Card</a> -->
+                    </div>
+                    <div class="c-biz__info">
+                        <a href="www.cafejason.com" class="c-biz__link"><i class="icon-world"></i>www.cafejason.com</a>
+                        <a href="tel:2283558518" class="c-biz__link"><i class="icon-phone"></i>(228)3558518</a>
+                        <!-- @19.5281206,-96.9195692 -->
+                        <a href="https://www.google.com/maps/dir//19.5281206,-96.9195692/@19.5281206,-96.9195692,17z?hl=es"
+                            class="c-biz__link"><i class="icon-location"></i>Rojano #20, Col. Centro.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="c-biz c-biz-landing c-biz-landing--second">
+                <div class="c-biz__top">
+                    <img src="./img/jason.jpg" alt="" class="c-biz__image">
+                </div>
+                <div class="c-biz__bottom">
+                    <div class="c-biz__details">
+                        <p class="c-biz__category">Restaurant</p>
+                        <p class="c-biz__hours">9:00AM - 3:00PM</p>
+                        <h2 class="c-biz__name">Café Jasón</h2>
+                        <p class="c-biz__type">Café de Especialidad</p>
+                        <ul class="c-biz__orders-list">
+                            <li class="c-biz__order"><span>Recoger</span></li>
+                            <li class="c-biz__order"><span>Domicilio</span></li>
+                            <li class="c-biz__order"><span>Sin contacto</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-biz__menu">
+                        <h3 class="c-biz__menu-title">Platillos favoritos:</h3>
+                        <ul class="c-biz__menu-list">
+                            <li class="c-biz__menu-item">Bagel de Huevo con Jamón</li>
+                            <li class="c-biz__menu-item">Bagel de Pera</li>
+                            <li class="c-biz__menu-item">Café Latte</li>
+                            <li class="c-biz__menu-item">Café Americano</li>
+                        </ul>
+                    </div>
+                    <div class="c-biz__actions">
+                        <a href="https://wa.me/5212283558518?text=Quisiera%20hacer%20un%20pedido" class="c-biz__cta">Ordenar</a>
+                        <!-- <a href="#" class="c-biz__cta c-biz__cta--hollow">Gift Card</a> -->
+                    </div>
+                    <div class="c-biz__info">
+                        <a href="www.cafejason.com" class="c-biz__link"><i class="icon-world"></i>www.cafejason.com</a>
+                        <a href="tel:2283558518" class="c-biz__link"><i class="icon-phone"></i>(228)3558518</a>
+                        <!-- @19.5281206,-96.9195692 -->
+                        <a href="https://www.google.com/maps/dir//19.5281206,-96.9195692/@19.5281206,-96.9195692,17z?hl=es"
+                            class="c-biz__link"><i class="icon-location"></i>Rojano #20, Col. Centro.</a>
+                    </div>
+                </div>
+            </div>
+            <div class="c-biz c-biz-landing">
+                <div class="c-biz__top">
+                    <img src="./img/jason.jpg" alt="" class="c-biz__image">
+                </div>
+                <div class="c-biz__bottom">
+                    <div class="c-biz__details">
+                        <p class="c-biz__category">Restaurant</p>
+                        <p class="c-biz__hours">9:00AM - 3:00PM</p>
+                        <h2 class="c-biz__name">Café Jasón</h2>
+                        <p class="c-biz__type">Café de Especialidad</p>
+                        <ul class="c-biz__orders-list">
+                            <li class="c-biz__order"><span>Recoger</span></li>
+                            <li class="c-biz__order"><span>Domicilio</span></li>
+                            <li class="c-biz__order"><span>Sin contacto</span></li>
+                        </ul>
+                    </div>
+                    <div class="c-biz__menu">
+                        <h3 class="c-biz__menu-title">Platillos favoritos:</h3>
+                        <ul class="c-biz__menu-list">
+                            <li class="c-biz__menu-item">Bagel de Huevo con Jamón</li>
+                            <li class="c-biz__menu-item">Bagel de Pera</li>
+                            <li class="c-biz__menu-item">Café Latte</li>
+                            <li class="c-biz__menu-item">Café Americano</li>
+                        </ul>
+                    </div>
+                    <div class="c-biz__actions">
+                        <a href="https://wa.me/5212283558518?text=Quisiera%20hacer%20un%20pedido" class="c-biz__cta">Ordenar</a>
+                        <!-- <a href="#" class="c-biz__cta c-biz__cta--hollow">Gift Card</a> -->
+                    </div>
+                    <div class="c-biz__info">
+                        <a href="www.cafejason.com" class="c-biz__link"><i class="icon-world"></i>www.cafejason.com</a>
+                        <a href="tel:2283558518" class="c-biz__link"><i class="icon-phone"></i>(228)3558518</a>
+                        <!-- @19.5281206,-96.9195692 -->
+                        <a href="https://www.google.com/maps/dir//19.5281206,-96.9195692/@19.5281206,-96.9195692,17z?hl=es"
+                            class="c-biz__link"><i class="icon-location"></i>Rojano #20, Col. Centro.</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- SECTION FOOTER -->
+        <section class="c-need c-need-grid">
+            <div class="c-hero c-need__rectangle">
+                <h3 class="c-need__title c-need__title-nomargin c-marquee__highlight"><b>Creole</b></h3>
+                <p class="c-need__text c-need__text-soft">Comida artesanal fusionada<br>con mexico nativa</p>
+            </div>
+            <img src="" alt="" class="c-need__img c-need__figure c-need__figure-grid">
+            <div class="c-need__title-grid">
+                <h3 class="c-need__title c-need__title-smaller">Juntos Podemos</h3>
+                <p class="c-need__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, officia! Laudantium eius, minima rem doloremque officia tenetur libero adipisci, possimus nisi at ipsam dolorem inventore? Magnam impedit eos molestias maiores?</p>
+            </div>
+            <p class="c-need__text c-need__text-grid--a">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, cupiditate dolore. Consequatur molestiae nam, quia adipisci nostrum, excepturi sit quod iste sint esse natus explicabo eos, autem reiciendis repellat quaerat?</p>
+            <p class="c-need__text c-need__text-grid--b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus rerum illum est similique provident incidunt nobis accusamus modi, error quidem eligendi numquam obcaecati amet eum culpa ut voluptas quis iusto?</p>
+        </section>
+        <section class="c-hero c-hero-flex">
+            <h3 class="c-hero__slogan c-hero__slogan-join"><span class="c-hero__slogan-join--span">Forma parte<br>de esta<br></span>hermosa<br>comunidad</h3>
+            <a href="#" class="c-hero__button c-hero__button-bigger">Inscribe tu local</a>
+        </section>
         <%- include('./includes/footer.ejs') %>
     </div>
-    <script src="./js/index.js"></script>
-    <script src="./js/zenscroll-min.js"></script>
 </body>
 </html>
