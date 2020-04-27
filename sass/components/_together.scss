@@ -1,0 +1,76 @@
+.c-together{
+  margin: 100px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 0px 40px;
+  grid-template-areas: 
+      "figure title info-a"
+      "figure rec info-b";
+
+  &__card{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 13px;
+  }
+
+  &__rectangle{
+    transform: translateX(-160px);
+    background-color: var(--body);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+    grid-area: rec;
+    text-align: left;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  &__title{
+    font-size: 3em;
+    margin: 0;
+
+    &-smaller{
+        margin-top: 50px;
+        font-size: 2em;
+    }
+
+    &-grid{
+        grid-area: title;
+    }
+  }
+
+  &__text{
+    font-size: 1.5em;
+
+    &-grid{
+    
+        &--a{
+            grid-area: info-a;
+            margin-top: 50px;           
+        }
+
+        &--b{
+            grid-area: info-b;
+        }
+    }
+
+    &-soft{
+        color: var(--text-light);
+        margin: 0;
+    }
+  }
+
+  
+  &__img{
+      grid-area: figure;
+      margin: 0px 60px 0px 0px;
+      border-radius: 30px;
+      width: 380px;
+      height: 100%;
+  }
+}

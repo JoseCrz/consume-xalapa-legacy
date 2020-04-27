@@ -1,0 +1,19 @@
+.c-thanks{
+    display: flex;
+    margin: 100px 0px 0px 0px;
+    height: 650px;
+
+    &__left{
+      align-self: center;
+      margin-left: 100px;
+    }
+
+    &__title{
+      font-size: 3em;
+    }
+
+    &__text{
+      font-size: 1.7em;
+      line-height: 40px;
+    }    
+}

@@ -1,0 +1,45 @@
+.c-subscribe{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 13px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__slogan{
+      font-size: 3em;
+      text-align: left;
+      font-weight: normal;
+      color: var(--text-light);  
+
+      &-span{
+        font-size: 1em;
+      }
+    }
+
+    &__button{
+      display: inline-flex;
+      width: fit-content;
+      height: fit-content;
+      padding: 15px 60px;
+      border: 1px solid var(--primary);
+      border-radius: 5px;
+      background-color: var(--primary);
+      color: var(--body);
+      cursor: pointer;
+      transition: cubic-bezier(0.6, -0.28, 0.735, 0.045).3s;
+
+      &-bigger{
+          font-size: 1.8em;
+      }
+
+      &:hover{
+          transform: translateY(-10px);
+      }
+    }
+}
