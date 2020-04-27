@@ -28,7 +28,15 @@
       }
 
       &__credits{
-            color: var(--text);
+        color: var(--text);
+      }
+
+      @include iphone-8 {
+
+        &__top {
+          justify-content: center;
+        }
+
       }
 
     // &__link {
