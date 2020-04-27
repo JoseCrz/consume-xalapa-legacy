@@ -90,6 +90,17 @@
         font-size: 4em;
         align-self: center;
     }
+
+    @include iphone-8 {
+        font-size: 12px;
+
+        &__content {
+            padding: 50px 0;
+        }
+        &__title {
+            font-size: 3em;
+        }
+    }
 }
 
 /*.c-hero {
