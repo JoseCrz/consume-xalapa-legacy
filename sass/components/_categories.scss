@@ -67,5 +67,20 @@
 
     }
 
+    @include ipad{
+        &__form{
+            width: initial;
+        }
+    }
+
+
+    @include iphone-8{
+        &__title{
+            font-size: 3.3em;
+        }
+        &__form{
+            width: initial;
+        }
+    }
     }
 

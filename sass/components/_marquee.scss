@@ -48,4 +48,10 @@
 
         
     }
+
+    @include iphone-8{
+        &__subtitle{
+            font-size: 2em;
+        }
+    }
 } 
