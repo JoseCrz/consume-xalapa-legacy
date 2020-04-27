@@ -2,21 +2,6 @@
     display: flex;
     margin: 100px 0px 0px 0px;
 
-    &-grid{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        gap: 0px 40px;
-        grid-template-areas: 
-            "figure title info-a"
-            "figure rec info-b";
-       // align-items: center;
-    }
-
-    &-space{
-        height: 650px;
-    }
-
     &__img{
         grid-area: figure;
         margin: 0px 60px 0px 0px;
@@ -28,70 +13,13 @@
             width: 600px;
             height: 400px;
         }
-
-        &-cards{
-            width: 300px;
-            height: 160px;
-        }
     }
 
     &__title{
         font-size: 3em;
-
-        &-smaller{
-            margin-top: 50px;
-            font-size: 2em;
-        }
-
-        &-grid{
-            grid-area: title;
-        }
-
-        &-nomargin{
-            margin: 0;
-        }
     }
 
     &__text{
         font-size: 1.5em;
-
-        &-space{
-            font-size: 1.7em;
-            line-height: 40px;
-        }
-
-        &-grid{
-        
-            &--a{
-                grid-area: info-a;
-                margin-top: 50px;           
-            }
-
-            &--b{
-                grid-area: info-b;
-            }
-        }
-
-        &-soft{
-            color: var(--text-light);
-            margin: 0;
-        }
-    }
-
-    &__left{
-        align-self: center;
-        margin-left: 100px;
-    }
-
-    &__rectangle{
-        transform: translateX(-160px);
-        background-color: var(--body);
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
-        grid-area: rec;
-        text-align: left;
-        height: fit-content;
-        width: fit-content;
-        padding: 10px 20px;
-        border-radius: 10px;
     }
 }

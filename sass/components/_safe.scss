@@ -47,4 +47,10 @@
       border: 3px solid var(--text-light);
       border-radius: 30px;
     }
+
+    &__arrow{
+      color: var(--text-light);
+      font-size: 4em;
+      align-self: center;
+    }
 }
