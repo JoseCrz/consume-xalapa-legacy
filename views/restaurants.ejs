@@ -4,16 +4,26 @@
 <body>
     <div class="u-wrapper">
         <%- include('./includes/header.ejs') %>
-        <!-- SECTION HERO -->
-        <section class="c-hero" id="inicio">
-            <h1 class="c-hero__title">Apoya a los negocios locales</h1>
-            <p class="c-hero__description">La cuarentena afecta principalmente a los negocios locales pequeños, esos que dependen de nuestro consumo diario. No dejemos que desistan en la lucha por permanecer operando y apoyémoslos.
-                Este sitio está hecho para que encuentres de forma rápida y sencilla estos negocios. Queremos hacerlo fácil para que contactes con ellos y puedas hacerles pedidos los cuales contribuiran a su permanencia.
-                Este proyecto es de uso gratuito para todos aquellos que quieran inscribir su negocio. Es una conexión directa de la cual no obtendremos ninguna comisión. Así que ¡VENGA! apóya lo más que puedas :)</p>
-                <a href="#negocios" class="c-mouse">
-                    <span></span>
-                </a>
-        </section>
+        <section class="c-categories">
+            <div class="c-categories__container">
+              <div class="c-categories__title-container">
+                <img class="c-categories__image" src="/img/card.png" alt="">
+                <h1 class="c-categories__title">Des<span class="c-categories__highlight">cubre</span></h1>
+              </div>
+              <h2 class="c-categories__subtitle">Cada compra que hagas dentro de estos<br>contribuirá a su permanencia</h2>
+            </div>
+            <div class="c-categories__form">
+                <form class="c-categories__form-container" action="">
+                    <button class="c-categories__form-button c-categories__form-button--active" type="submit">Restaurantes</button>
+                    <button class="c-categories__form-button" type="submit">Tradicional Mexicana</button>
+                    <button class="c-categories__form-button" type="submit">Cafeterias</button>
+                    <button class="c-categories__form-button" type="submit">Comida Rápida</button>
+                    <button class="c-categories__form-button" type="submit">Pastelerías</button>
+                    <button class="c-categories__form-button" type="submit">Comida internacional</button>
+                    <button class="c-categories__form-button" type="submit">Otros</button>
+                </form>
+            </div>
+          </section>
         <!-- SECTION NEGOCIOS -->
         <section id="negocios" class="c-section">
             <h2 class="c-section__title">Encuentra tu opción ideal</h2>
@@ -76,34 +86,7 @@
                  <% } %>
             </div>
         </section>
-        <!-- SECTION MAPA -->
-        <section id="mapa" class="c-section">
-            <h2 class="c-section__title">Encuentra tu local</h2>
-            <p class="c-section__description">Quisimos hacerte fácil llegar al lugar. También ver si no queda tan lejos de tu hogar y si el servicio de entrega no te cobrará tan caro. Busca tu local aquí.</p>
-            <div class="c-map">
-                <div class="c-map__container">
-                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                    <div class="elfsight-app-2ad37fcd-c6aa-442a-b83e-1e3503acf41f"></div>
-                </div>
-            </div>
-        </section>
-        <!-- SECTION PROMO -->
-        <section id="promociones" class="c-section">
-            <h2 class="c-section__title">Promociones</h2>
-            <p class="c-section__description">Encuentra las mejores promociones que la comunidad tiene para ti</p> 
-            <div class="c-promo">
-                <img src="./img/jason-promo-1.jpeg" alt="" class="c-promo__image">
-                <div class="c-promo__paper">
-                    <div class="c-promo__text-container">
-                        <h3 class="c-promo__title">Combos - Desayunos</h3>
-                        <h4 class="c-promo__author">Café Jasón</h4>
-                        <div class="c-promo__cta-container">
-                            <a class="c-promo__cta" href="https://wa.me/5212283558518?text=Quisiera%20la%20promo%20de%20combo-desayuno">Ordena aquí</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!-- SECTION CONTACTO -->
         <section id="contacto" class="c-section">
             <h2 class="c-section__title c-section__title--logo-below">Unete a</h2>
