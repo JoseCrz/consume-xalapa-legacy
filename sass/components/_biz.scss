@@ -152,6 +152,21 @@
     }
 
     @include iphone-8 {
+
+        &-landing{
+            position: absolute;
+            left: 5vw;
+            margin-top: 500px;
+
+            &--second{
+                transform: none;
+            }
+
+            &--third{
+                transform: none;
+            }
+        }
+
         &__container {
             grid-template-columns: 1fr;
             gap: 30px;
