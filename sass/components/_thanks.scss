@@ -21,4 +21,15 @@
       width: 300px;
       height: 160px;
     }
+
+    @include iphone-8{
+      height: fit-content;
+      margin-bottom: 740px;
+
+        &__left{
+        align-self: center;
+        text-align: center;
+        margin-left: 0px;
+      }
+    }
 }
