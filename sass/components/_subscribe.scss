@@ -42,4 +42,25 @@
           transform: translateY(-10px);
       }
     }
+
+    @include iphone-8{
+      &__slogan{
+        font-size: 2em;
+        text-align: left;
+        font-weight: normal;
+        
+        &-span{
+          color: var(--text-light);  
+          font-size: 1em;
+        }
+      }
+
+      &__button{
+        padding: 5px 25px;
+
+        &-bigger{
+          font-size: 1.4em;
+        }
+      }
+    }
 }

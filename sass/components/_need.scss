@@ -22,4 +22,28 @@
     &__text{
         font-size: 1.5em;
     }
+
+
+    @include iphone-8{
+        flex-direction: column;
+
+        &__title{
+            font-size: 2.4em;
+        }
+        
+        &__text {
+            font-size: 1.4em;
+        }
+        
+        &__img{
+            width: 365px;
+            
+            &-undefined{
+                height: 395px;
+            }
+        }
+        
+    
+    }
+
 }
