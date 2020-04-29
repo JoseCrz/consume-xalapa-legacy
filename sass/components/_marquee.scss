@@ -50,8 +50,20 @@
     }
 
     @include iphone-8{
+        &__image{    
+            &--big{
+                width: 85px;
+            }
+        }
+        &__title{
+            font-size: 3.3em;
+        }
         &__subtitle{
             font-size: 2em;
+        }
+
+        &__subtitle-highlight{
+            font-size: inherit;
         }
     }
 } 
