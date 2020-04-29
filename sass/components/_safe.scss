@@ -80,8 +80,17 @@
         transform: rotateZ(90deg);
       }
 
-      
 
+
+    }
+
+    @include ipad{
+      padding: 80px auto;
+      
+      &__imgs{
+        width: 140px;
+        height: 192px;
+      }
     }
 
 }
