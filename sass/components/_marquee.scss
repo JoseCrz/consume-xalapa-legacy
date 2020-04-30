@@ -13,7 +13,7 @@
     }
 
     &__image{
-        width: 50px;
+        width: 40px;
 
         &--big{
             width: 95px;
@@ -56,10 +56,11 @@
             }
         }
         &__title{
-            font-size: 3.3em;
+            font-size: 3em;
+
         }
         &__subtitle{
-            font-size: 2em;
+            font-size: 1.4em;
         }
 
         &__subtitle-highlight{
