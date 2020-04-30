@@ -48,6 +48,11 @@
 
     @include ipad{
         flex-direction: column;
+        margin-top: 75px;
+
+        &__div{
+            text-align: center;
+        }
 
         &__title{
             font-size: 2.4em;
@@ -63,7 +68,9 @@
             width: 690px;
             
             &-undefined{
-                height: 395px;
+                width: 100%;
+                height: auto;
+                margin: 0;
             }
         }
     }

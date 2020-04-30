@@ -31,6 +31,9 @@
         border-radius: 5px;
         background-color: var(--primary);
         color: var(--body);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.25em;
         cursor: pointer;
         transition: cubic-bezier(0.6, -0.28, 0.735, 0.045).3s;
 
@@ -57,6 +60,10 @@
         }
         &__title {
             font-size: 3em;
+        }
+
+        &__slogan{
+            padding: 20px;
         }
     }
 }
