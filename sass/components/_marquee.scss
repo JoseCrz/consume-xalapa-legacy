@@ -15,9 +15,10 @@
     &__image{
         width: 40px;
 
-        &--big{
-            width: 95px;
-        }
+    }
+
+    &__big{
+        width: 80px;
     }
 
     &__title{
@@ -51,16 +52,19 @@
 
     @include iphone-8{
         &__image{    
-            &--big{
-                width: 85px;
-            }
+           width: 40px;
+        }
+        
+        &__big{
+            width: 60px;
+            height: 50px;
         }
         &__title{
-            font-size: 3em;
+            font-size: 2.4em;
 
         }
         &__subtitle{
-            font-size: 1.4em;
+            font-size: 1.2em;
         }
 
         &__subtitle-highlight{
