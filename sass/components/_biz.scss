@@ -156,14 +156,14 @@
         &-landing{
             position: absolute;
             left: 0;
-            transform: scale(0.8) translateY(160px);
+            transform: scale(0.8) translateY(130px);
             margin: 0;
             &--second{
-                transform: scale(0.8) translateY(160px) translateX(30px) rotateZ(5deg);
+                transform: scale(0.8) translateY(130px) translateX(30px) rotateZ(5deg);
             }
 
             &--third{
-                transform: scale(0.8) translateY(160px) translateX(60px) rotatez(10deg);
+                transform: scale(0.8) translateY(130px) translateX(60px) rotatez(10deg);
             }
         }
 

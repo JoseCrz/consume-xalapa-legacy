@@ -23,6 +23,7 @@
     }
 
     &__button{
+      font-size: 1.8em;
       display: inline-flex;
       width: fit-content;
       height: fit-content;
@@ -33,10 +34,6 @@
       color: var(--body);
       cursor: pointer;
       transition: cubic-bezier(0.6, -0.28, 0.735, 0.045).3s;
-
-      &-bigger{
-          font-size: 1.8em;
-      }
 
       &:hover{
           transform: translateY(-10px);
@@ -58,11 +55,9 @@
       }
 
       &__button{
+        font-size: 1.55em;
+        text-transform: uppercase;
         padding: 5px 25px;
-
-        &-bigger{
-          font-size: 1.55em;
-        }
       }
     }
 }
