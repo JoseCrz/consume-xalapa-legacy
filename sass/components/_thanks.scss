@@ -25,12 +25,23 @@
     @include iphone-8{
       height: fit-content;
       margin-top: 0;
-      margin-bottom: 650px;
+      margin-bottom: 580px;
+      width: 100%;
+      justify-content: center;
 
         &__left{
         align-self: center;
         text-align: center;
         margin-left: 0px;
+      }
+
+      &__title{
+        margin: 0;
+      }
+
+      &__text{
+        margin: 5px 0px 0px 0px;
+        font-size: 1.4em;
       }
     }
 }
