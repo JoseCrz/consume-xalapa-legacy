@@ -155,17 +155,15 @@
 
         &-landing{
             position: absolute;
-            left: 0%;
-            margin-top: 260px;
-            transform: scale(0.8);
+            left: 0;
+            transform: scale(0.8) translateY(160px);
+            margin: 0;
             &--second{
-                left: 10%;
-                margin-top: 290px;
+                transform: scale(0.8) translateY(160px) translateX(30px) rotateZ(5deg);
             }
 
             &--third{
-                left: 20%;
-                margin-top: 320px;
+                transform: scale(0.8) translateY(160px) translateX(60px) rotatez(10deg);
             }
         }
 
